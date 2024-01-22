@@ -3,6 +3,11 @@ import PIL
 import threading
 import os
 
+def RunThread(threadedFuntion):
+    returnableThread = threading.Thread(daemon=True, target=threadedFuntion)
+    returnableThread.run()
+    return returnableThread
+
 
 def LoadOverview():
     window = tk.Tk()
